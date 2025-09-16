@@ -1,5 +1,4 @@
 function showDetails(req, res, next) {
-    console.log(req.body.text)
     const message = {
         text: req.body.text,
         user: req.body.user,
