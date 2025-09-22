@@ -1,3 +1,12 @@
+<% if (error) {%>
+   <ul>
+      <% error.forEach((err) => { %>
+         <li><%- err.msg %></li>
+      <% }) %>
+   </ul>
+<% } %>
+
+
 <form method="POST" action="/new">
    <label for="name">Name: </label>
    <input type="text" name="name" id="name">

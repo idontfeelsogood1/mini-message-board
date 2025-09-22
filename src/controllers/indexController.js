@@ -1,7 +1,8 @@
 const messages = require('../models/messages')
 
-function indexController(req, res, next) {
-    res.render('messages', {messages: messages})
+async function indexController(req, res, next) {
+    const arr = await messages.getAllMessages()
+    res.render('messages', {messages: arr})
 }
 
 module.exports = indexController

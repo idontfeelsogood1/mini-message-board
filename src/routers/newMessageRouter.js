@@ -4,6 +4,6 @@ const sendForm = require('../controllers/sendForm')
 const addNewMessage = require('../controllers/addNewMessage')
 
 newMessageRouter.get('/', sendForm)
-newMessageRouter.post('/', addNewMessage)
+newMessageRouter.post('/', addNewMessage.validators, addNewMessage.addNewMessage)
 
 module.exports = newMessageRouter

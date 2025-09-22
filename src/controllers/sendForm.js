@@ -1,5 +1,5 @@
 function sendForm(req, res, next) {
-    res.render('form')
+    res.render('form', { error: false })
 }
 
 module.exports = sendForm

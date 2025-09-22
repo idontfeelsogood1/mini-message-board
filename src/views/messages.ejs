@@ -1,12 +1,12 @@
 <% messages.forEach(message => { %>
     <div>
         <ul>
-            <li><%= message.user %></li>
+            <li><%= message.username %></li>
             <li><%= message.text %></li>
             <li><%= message.added %></li>
         </ul>
         <form method="POST" action="/details">
-            <input type="hidden" name="user" value="<%= message.user %>">
+            <input type="hidden" name="user" value="<%= message.username %>">
             <input type="hidden" name="text" value="<%= message.text %>">
             <input type="hidden" name="added" value="<%= message.added %>">
             <button type="submit">Details</button>
